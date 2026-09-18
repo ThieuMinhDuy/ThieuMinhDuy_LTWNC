@@ -1,5 +1,7 @@
 import {createContext, useContext, useState} from "react";
 import React from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import "./Accordion.css";
 
 interface AccordionContextType {
     openItem: string | null;
@@ -24,7 +26,9 @@ function Accordion({children}: AccordionProps) {
 
     return (
         <AccordionContext.Provider value={{openItem, setOpenItem}}>
-            {children}
+            <div className="accordion-root">
+                {children}
+            </div>
         </AccordionContext.Provider>
     );
 }
@@ -42,12 +46,11 @@ function AccordionItem({id, children}: AccordionItemProps) {
     }
 
     const { openItem } = context;
-
     const isOpen = openItem === id;
 
     return (
         <AccordionItemContext.Provider value={{ id, isOpen }}>
-            <div>
+            <div className={`accordion-item ${isOpen ? 'open' : ''}`}>
                 {children}
             </div>
         </AccordionItemContext.Provider>
@@ -82,8 +85,9 @@ function AccordionTrigger({children}: AccordionTriggerProps) {
     };
 
     return (
-        <button onClick={handleClick}>
-            {children}
+        <button className="accordion-trigger" onClick={handleClick}>
+            <span>{children}</span>
+            {isOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
         </button>
     );
 }
@@ -106,7 +110,7 @@ function AccordionContent({children}: AccordionContentProps) {
     }
 
     return (
-        <div>
+        <div className="accordion-content">
             {children}
         </div>
     );
