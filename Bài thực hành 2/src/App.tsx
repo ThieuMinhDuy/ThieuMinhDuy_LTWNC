@@ -5,6 +5,7 @@ import { useAppDispatch, useAppSelector } from "./app/hooks";
 import { fetchProducts } from "./features/products/productsSlice";
 import ProductList from "./components/ProductList/ProductList";
 import Cart from "./components/Cart/Cart";
+import Favorites from "./components/Favorites/Favorites";
 import "./App.css";
 
 function App() {
@@ -74,7 +75,9 @@ function App() {
                             prevPage={prevPage}
                         />
                     </div>
-                    <div className="store-cart">
+
+                    <div className="store-sidebar">
+                        <Favorites />
                         <Cart />
                     </div>
                 </section>

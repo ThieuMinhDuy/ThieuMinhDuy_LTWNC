@@ -1,0 +1,127 @@
+.favorites-container {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.favorites-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.favorites-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #1a202c;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.favorites-count {
+    background: #1a202c;
+    color: white;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.favorites-empty {
+    text-align: center;
+    color: #718096;
+    padding: 40px 0;
+}
+
+.favorites-empty svg {
+    margin-bottom: 10px;
+}
+
+.favorites-empty p {
+    margin: 0;
+}
+
+.favorites-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.favorite-item-image {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.favorite-item-details {
+    flex-grow: 1;
+}
+
+.favorite-item-name {
+    margin: 0 0 5px 0;
+    font-size: 0.9rem;
+    color: #2d3748;
+    line-height: 1.3;
+}
+
+.favorite-item-price {
+    margin: 0;
+    font-weight: bold;
+    color: #1a202c;
+    font-size: 0.95rem;
+}
+
+.favorite-remove-btn {
+    background: none;
+    border: none;
+    color: #e53e3e;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.favorite-remove-btn:hover {
+    background: #fff5f5;
+}
+
+.favorite-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 8px;
+    background: white;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.favorite-btn:hover {
+    background: #f7fafc;
+}
+
+.favorite-btn.active {
+    color: #e53e3e;
+    border-color: #e2e8f0;
+}
