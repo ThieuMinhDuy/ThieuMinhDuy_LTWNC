@@ -1,0 +1,77 @@
+.performance-page {
+    height: 100vh;
+    padding: 30px;
+    background: #f5f5f5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.performance-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.performance-header h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+}
+
+.performance-header p {
+    margin: 0;
+    color: #666;
+}
+
+.performance-info {
+    max-width: 1360px;
+    margin: 0 auto 20px;
+    padding: 15px 20px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.performance-grid-wrapper {
+    width: 1360px;
+    height: 600px;
+    margin: 0 auto;
+    background: #f5f5f5;
+}
+
+.performance-product-card {
+    box-sizing: border-box;
+    height: calc(100% - 16px);
+    margin: 8px;
+    padding: 15px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-number {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.performance-product-card h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+}
+
+.performance-price {
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.performance-product-card button {
+    width: 100%;
+    padding: 9px;
+    border: none;
+    border-radius: 6px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+    margin-top: auto;
+}
