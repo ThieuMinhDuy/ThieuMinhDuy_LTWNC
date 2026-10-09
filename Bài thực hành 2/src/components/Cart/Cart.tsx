@@ -1,6 +1,7 @@
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { removeItem, updateQuantity } from "../../features/cart/cartSlice";
 import { Trash2, Plus, Minus, ShoppingBag } from "lucide-react";
+// @ts-ignore CSS được Vite xử lý, Jest mock file này khi chạy test
 import "./Cart.css";
 
 export default function Cart() {
