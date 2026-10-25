@@ -1,0 +1,18 @@
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
+
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+    const session = await auth();
+
+    if (!session?.user) {
+        redirect("/products");
+    }
+
+    if (session.user.role === "admin") {
+        redirect("/admin");
+    } else {
+        redirect("/dashboard");
+    }
+}
